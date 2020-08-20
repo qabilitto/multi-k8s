@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
 spec:
   rules:
-      http:
+    - http:
         paths:
           - path: /
             backend:
@@ -19,7 +19,7 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-      http:
+    - http:
         paths:
           - path: /
             backend:
